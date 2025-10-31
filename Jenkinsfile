@@ -8,12 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch:'master', url:'https://github.com/MACIB-Grup2/DVWA.git'
-            }
-        }
-
         stage('SonarQube Analysis') {
             steps {
                 sh """
